@@ -7,4 +7,21 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\add.png" />
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\move.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\add.png" />
+    <Resource Include="Images\move.png" />
+  </ItemGroup>
+
 </Project>

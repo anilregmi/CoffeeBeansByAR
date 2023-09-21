@@ -18,3 +18,5 @@ C:\Users\Anyone\source\repos\CoffeeBeans\CoffeeBeans\obj\Debug\net6.0-windows\re
 C:\Users\Anyone\source\repos\CoffeeBeans\CoffeeBeans\obj\Debug\net6.0-windows\CoffeeBeans.pdb
 C:\Users\Anyone\source\repos\CoffeeBeans\CoffeeBeans\obj\Debug\net6.0-windows\CoffeeBeans.genruntimeconfig.cache
 C:\Users\Anyone\source\repos\CoffeeBeans\CoffeeBeans\obj\Debug\net6.0-windows\ref\CoffeeBeans.dll
+C:\Users\Anyone\source\repos\CoffeeBeans\CoffeeBeans\bin\Debug\net6.0-windows\Images\logo.png
+C:\Users\Anyone\source\repos\CoffeeBeans\CoffeeBeans\obj\Debug\net6.0-windows\CoffeeBeans_Content.g.cs

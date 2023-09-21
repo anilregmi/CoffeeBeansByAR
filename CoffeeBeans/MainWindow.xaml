@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoffeeBeans"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+         Title="Customers App" 
+         d:DesignWidth="700" d:DesignHeight="600"  Height="500" Width="800" FontSize="20">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"></ColumnDefinition>
@@ -27,32 +28,37 @@
         </Menu>
         
         <!--Header-->
-        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Background="#F05A28" Orientation="Horizontal">
-            <Image Source="/Images/logo.png" Width="100"> </Image>
-            <TextBlock Text="Customer App" FontSize="30" Foreground="White"></TextBlock>
-            <TextBlock Text="Version 1.0" FontSize="16" Foreground="#333333"></TextBlock>
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" Background="#F05A28">
+        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center">
+            <Image Source="Images/logo.png" Width="100" Margin="5"> </Image>
+            <TextBlock Text="Customer App" FontSize="30" Foreground="White" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Text="Version 1.0" FontSize="16" Foreground="#333333" VerticalAlignment="Bottom" Margin="10 0 0 22"></TextBlock>
         </StackPanel>
-        
+        </Grid>
         <!--Customer List -->
-        <StackPanel Grid.Row="2" Background="#777">
+        <Grid Grid.Row="2" Background="#777">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
             <StackPanel Orientation="Horizontal">
                 <Button Margin="10" Width="75">
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="Images/add.png" Height="18" Margin="0 0 5 0"></Image>
-                        <TextBlock Text="add"></TextBlock>
+                        <Image Source="Images\add.png" Height="18" Margin="0 0 5 0"></Image>
+                        <TextBlock Text="Add"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button Content="Delete" Margin="10 10 10 0"></Button>
+                <Button Content="Delete" Width="75"  Margin="0 10 10 10"></Button>
                 <Button Margin="0 10 10 10">
                     <Image Source="Images/move.png" Height="18"> </Image>
                 </Button>
             </StackPanel>
-            <ListView Margin="10 0 10 10">
+            <ListView Grid.Row="1" Margin="10 0 10 10">
                 <ListViewItem>Ram</ListViewItem>
                 <ListViewItem>Gopal</ListViewItem>
                 <ListViewItem>Hari</ListViewItem>
             </ListView>
-        </StackPanel>
+        </Grid>
             
             <!--Customers Details-->
         <StackPanel Grid.Row="2" Grid.Column="1 " Margin="10">

@@ -29,5 +29,10 @@ namespace CoffeeBeans
         {
             MessageBox.Show("s");
         }
+
+        private void BtnMoveNavigation_Click()
+        {
+
+        }
     }
 }
