@@ -20,3 +20,8 @@ C:\Users\Anyone\source\repos\CoffeeBeans\CoffeeBeans\obj\Debug\net6.0-windows\Co
 C:\Users\Anyone\source\repos\CoffeeBeans\CoffeeBeans\obj\Debug\net6.0-windows\ref\CoffeeBeans.dll
 C:\Users\Anyone\source\repos\CoffeeBeans\CoffeeBeans\bin\Debug\net6.0-windows\Images\logo.png
 C:\Users\Anyone\source\repos\CoffeeBeans\CoffeeBeans\obj\Debug\net6.0-windows\CoffeeBeans_Content.g.cs
+C:\Users\Anyone\source\repos\CoffeeBeans\CoffeeBeans\obj\Debug\net6.0-windows\Controls\HeaderControl.g.cs
+C:\Users\Anyone\source\repos\CoffeeBeans\CoffeeBeans\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Anyone\source\repos\CoffeeBeans\CoffeeBeans\obj\Debug\net6.0-windows\Controls\HeaderControl.baml
+C:\Users\Anyone\source\repos\CoffeeBeans\CoffeeBeans\obj\Debug\net6.0-windows\Views\CustomersView.g.cs
+C:\Users\Anyone\source\repos\CoffeeBeans\CoffeeBeans\obj\Debug\net6.0-windows\Views\CustomersView.baml

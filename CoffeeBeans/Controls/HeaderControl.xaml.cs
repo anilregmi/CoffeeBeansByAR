@@ -13,23 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CoffeeBeans
+namespace CoffeeBeans.Controls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for HeaderControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class HeaderControl : UserControl
     {
-        public MainWindow()
+        public HeaderControl()
         {
             InitializeComponent();
         }
-
-        private void btnAddUser(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("s");
-        }
-
-        
     }
 }
