@@ -1,0 +1,76 @@
+﻿<Window x:Class="CoffeeBeans.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoffeeBeans"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <!--Main Menu-->
+        <Menu Grid.ColumnSpan="2" FontSize="20">
+            <MenuItem Header="_View">
+                <MenuItem Header="_Customers"></MenuItem>
+                <MenuItem Header="_Products"></MenuItem>
+            </MenuItem>
+        </Menu>
+        
+        <!--Header-->
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Background="#F05A28" Orientation="Horizontal">
+            <Image Source="/Images/logo.png" Width="100"> </Image>
+            <TextBlock Text="Customer App" FontSize="30" Foreground="White"></TextBlock>
+            <TextBlock Text="Version 1.0" FontSize="16" Foreground="#333333"></TextBlock>
+        </StackPanel>
+        
+        <!--Customer List -->
+        <StackPanel Grid.Row="2" Background="#777">
+            <StackPanel Orientation="Horizontal">
+                <Button Margin="10" Width="75">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Images/add.png" Height="18" Margin="0 0 5 0"></Image>
+                        <TextBlock Text="add"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Content="Delete" Margin="10 10 10 0"></Button>
+                <Button Margin="0 10 10 10">
+                    <Image Source="Images/move.png" Height="18"> </Image>
+                </Button>
+            </StackPanel>
+            <ListView Margin="10 0 10 10">
+                <ListViewItem>Ram</ListViewItem>
+                <ListViewItem>Gopal</ListViewItem>
+                <ListViewItem>Hari</ListViewItem>
+            </ListView>
+        </StackPanel>
+            
+            <!--Customers Details-->
+        <StackPanel Grid.Row="2" Grid.Column="1 " Margin="10">
+            <Label>FirstName:</Label>
+            <TextBox></TextBox>
+            <Label>LastName:</Label>
+            <TextBox></TextBox>
+            <CheckBox Margin="0 10 0 0">
+                Is Developer
+            </CheckBox>
+        </StackPanel>
+            
+            <!--Statusbar-->
+        <StatusBar Grid.Row="3" Grid.ColumnSpan="2">
+            <StatusBarItem FontSize="20" Content="(C) CoffeeBeans"></StatusBarItem>
+        </StatusBar>
+
+        
+    </Grid>
+    
+</Window>
