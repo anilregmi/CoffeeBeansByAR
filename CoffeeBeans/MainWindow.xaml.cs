@@ -30,9 +30,11 @@ namespace CoffeeBeans
             MessageBox.Show("s");
         }
 
-        private void BtnMoveNavigation_Click()
+        private void BtnMoveNavigation_Click(object sender, RoutedEventArgs e)
         {
-
+            var column = (int)customerListGrid.GetValue(Grid.ColumnProperty);
+            var newColumn = column == 0 ? 2 : 0;
+            customerListGrid.SetValue(Grid.ColumnProperty, newColumn);
         }
     }
 }
