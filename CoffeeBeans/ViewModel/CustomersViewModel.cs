@@ -11,16 +11,16 @@ namespace CoffeeBeans.ViewModel
     public class CustomersViewModel : ViewModelBase
     {
         private readonly ICustomerDataProvider _customerDataProvider;
-        private Customer? _selectedCustomer;
+        private CustomerItemViewModel? _selectedCustomer;
 
         public CustomersViewModel(ICustomerDataProvider customerDataProvider)
         {
             _customerDataProvider = customerDataProvider;
         }
 
-        public ObservableCollection<Customer> Customers { get; } = new();
+        public ObservableCollection<CustomerItemViewModel> Customers { get; } = new();
 
-        public Customer? SelectedCustomer
+        public CustomerItemViewModel? SelectedCustomer
         {
             get => _selectedCustomer;
             set
@@ -42,7 +42,7 @@ namespace CoffeeBeans.ViewModel
             {
                 foreach (var customer in customers)
                 {
-                    Customers.Add(customer);
+                    Customers.Add(new CustomerItemViewModel(customer));
                 }
             }
         }
@@ -50,8 +50,9 @@ namespace CoffeeBeans.ViewModel
         internal void Add()
         {
             var customer = new Customer { FirstName = "new name" };
-            Customers.Add(customer);
-            SelectedCustomer = customer;
+            var viewModel=new CustomerItemViewModel(customer);
+            Customers.Add(viewModel);
+            SelectedCustomer = viewModel;
         }
 
     }
