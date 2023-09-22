@@ -46,5 +46,10 @@ namespace CoffeeBeans.Views
             var newColumn = column == 0 ? 2 : 0;
             Grid.SetColumn(customerListGrid, newColumn);
         }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            _viewModel.Add();
+        }
     }
 }

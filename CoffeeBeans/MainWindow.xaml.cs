@@ -25,10 +25,6 @@ namespace CoffeeBeans
             InitializeComponent();
         }
 
-        private void btnAddUser(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("s");
-        }
 
         
     }
