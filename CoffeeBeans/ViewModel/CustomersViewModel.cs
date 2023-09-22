@@ -2,14 +2,13 @@
 using CoffeeBeans.Models;
 using System;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
 namespace CoffeeBeans.ViewModel
 {
-    public class CustomersViewModel : INotifyPropertyChanged
+
+    public class CustomersViewModel : ViewModelBase
     {
         private readonly ICustomerDataProvider _customerDataProvider;
         private Customer? _selectedCustomer;
@@ -31,7 +30,6 @@ namespace CoffeeBeans.ViewModel
             }
         }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
 
         public async Task LoadAsync()
         {
@@ -54,10 +52,6 @@ namespace CoffeeBeans.ViewModel
             var customer = new Customer { FirstName = "new name" };
             Customers.Add(customer);
             SelectedCustomer = customer;
-        }
-        private void RaisePropetyChanged([CallerMemberName] string? propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
     }
