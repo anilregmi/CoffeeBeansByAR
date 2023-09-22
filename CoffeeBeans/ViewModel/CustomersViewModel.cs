@@ -2,6 +2,7 @@
 using CoffeeBeans.Models;
 using System;
 using System.Collections.ObjectModel;
+using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -12,6 +13,7 @@ namespace CoffeeBeans.ViewModel
     {
         private readonly ICustomerDataProvider _customerDataProvider;
         private CustomerItemViewModel? _selectedCustomer;
+        private int _navigationColumn;
 
         public CustomersViewModel(ICustomerDataProvider customerDataProvider)
         {
@@ -29,6 +31,7 @@ namespace CoffeeBeans.ViewModel
                 RaisePropetyChanged();
             }
         }
+
 
 
         public async Task LoadAsync()
@@ -50,10 +53,22 @@ namespace CoffeeBeans.ViewModel
         internal void Add()
         {
             var customer = new Customer { FirstName = "new name" };
-            var viewModel=new CustomerItemViewModel(customer);
+            var viewModel = new CustomerItemViewModel(customer);
             Customers.Add(viewModel);
             SelectedCustomer = viewModel;
         }
-
+        public int NavigationColumn
+        {
+            get => _navigationColumn;
+            private set
+            {
+                _navigationColumn = value;
+                RaisePropetyChanged();
+            }
+        }
+        internal void MoveNavigation()
+        {
+            NavigationColumn = NavigationColumn == 0 ? 2 : 0;
+        }
     }
 }
