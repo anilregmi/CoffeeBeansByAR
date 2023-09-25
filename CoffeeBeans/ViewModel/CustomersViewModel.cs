@@ -13,7 +13,7 @@ namespace CoffeeBeans.ViewModel
     {
         private readonly ICustomerDataProvider _customerDataProvider;
         private CustomerItemViewModel? _selectedCustomer;
-        private int _navigationColumn;
+        private NavigationSide _navigationSide;
 
         public CustomersViewModel(ICustomerDataProvider customerDataProvider)
         {
@@ -57,18 +57,24 @@ namespace CoffeeBeans.ViewModel
             Customers.Add(viewModel);
             SelectedCustomer = viewModel;
         }
-        public int NavigationColumn
+        public NavigationSide NavigationSide
         {
-            get => _navigationColumn;
+            get => _navigationSide;
             private set
             {
-                _navigationColumn = value;
+                _navigationSide = value;
                 RaisePropetyChanged();
             }
         }
         internal void MoveNavigation()
         {
-            NavigationColumn = NavigationColumn == 0 ? 2 : 0;
+            NavigationSide = NavigationSide == NavigationSide.Left ? NavigationSide.Right : NavigationSide.Left;
         }
+
+    }
+    public enum NavigationSide
+    {
+        Left,
+        Right
     }
 }
